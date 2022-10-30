@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="main-title">
+          <br><br><br>
+          <p class="font-weight-bold" style="font-size:26px" >
+            <br>Hi Octavia!</p>
+          
+        </div>
+        <div class="header-right"style="font-size:16px">
+          You have 3 new ticket
+          <i class="fa fa-bell" style="font-size:26px"><span class="badge">3</span></i>
+          </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <i class="fa fa-th-large" style="font-size:36px"></i> whatcs
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item" id="grad">
+            <span class="material-icons-outlined">dashboard</span> Dashboard
+          </li>
+          <li class="sidebar-list-item">
+            <i class="fa fa-comments-o" style="font-size:26px"></i> 
+            Inbox
+          </li>
+          <li class="sidebar-list-item">
+            <i class="fa fa-volume-up" style="font-size:26px"></i> Broadcast
+          </li>
+          <li class="sidebar-list-item"> 
+            <i class="fa fa-users" style="font-size:26px"></i> Contacts
+          </li>
+          <li class="sidebar-list-item">
+            <i class="fa fa-play-circle" style="font-size:26px"></i> Automation
+          </li>
+         
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        Take a look of weeekly customer engagement overview
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">NEW TICKETS</p>
+              <i class="fa fa-envelope" style="font-size:36px;color:#009973; "></i>                        </div>
+            <span class="text-primary font-weight-bold">34</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">OPEN TICKETS</p>
+              <i class="fa fa-envelope-open" style="font-size:36px;color:#009973;"></i> 
+            </div>
+            <span class="text-primary font-weight-bold">30</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PENDINGS</p>
+              <i class="fa fa-window-restore" style="font-size:36px;color:#009973;"></i> 
+            </div>
+            <span class="text-primary font-weight-bold">10</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">TOTAL RESOLVED</p>
+              <i class="fa fa-check-circle" style="font-size:36px;color:#009973;"></i> 
+            </div>
+            <span class="text-primary font-weight-bold">28</span>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">TICKETS EXPIRED</p>
+              <i class="fa fa-warning" style="font-size:36px;color:#009973;"></i> 
+            </div>
+            <span class="text-primary font-weight-bold">8</span>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">AVG RESPONSE TIME</p>
+              <i class="fa fa-clock-o" style="font-size:36px;color:#009973;"></i> 
+            </div>
+            <span class="text-primary font-weight-bold">1.2 min</span>
+          </div>
+
+        </div>
+
+        <div class="charts1">
+
+          <div class="charts-card">
+            <p class="chart-title" >Ticket Status</p>
+            <div id="chart_div" style="width: 100%; height: 100%;"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Top Agent's</p>
+            <div class="meta-footer-thumb">
+            
+              <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+              </span>
+              <span class="author-meta">
+              <span class="post-name"><a href="#">Mansur Gerrard</a></span><br/>
+              <span class="post-date">mansurgerr@email.com</span><span class="dot">        </span><span class="post-read"><b>&nbsp;10 chats &nbsp;--- </b></span>
+              </div><br>
+              <div class="meta-footer-thumb">
+            
+                <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                </span>
+                <span class="author-meta">
+                <span class="post-name"><a href="#">Octavia Sherly</a></span><br/>
+                <span class="post-date">octavia@email.com</span><span class="dot"> </span><span class="post-read" style="justify-content: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 chats &nbsp;&nbsp;&nbsp;--- </b></span>
+                </div><br><div class="meta-footer-thumb">
+            
+                  <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                  </span>
+                  <span class="author-meta">
+                  <span class="post-name"><a href="#">Jonathan Kepriwe</a></span><br/>
+                  <span class="post-date">Jonatkep@email.com</span><span class="dot"> </span><span class="post-read" style="justify-content: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9 chats &nbsp;&nbsp;&nbsp;--- </b></span>
+                  </div><br><div class="meta-footer-thumb">
+            
+                    <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                    </span>
+                    <span class="author-meta">
+                    <span class="post-name"><a href="#">Elvina Seagull</a></span><br/>
+                    <span class="post-date">
+                      elvinasea@email.com</span><span class="dot"> </span><span class="post-read" style="justify-content: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 chats &nbsp;&nbsp;&nbsp;--- </b></span>
+                    </div><br><div class="meta-footer-thumb">
+            
+                      <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                      </span>
+                      <span class="author-meta">
+                      <span class="post-name"><a href="#">Marni Mawar Indah</a></span><br/>
+                      <span class="post-date">marmawar@email.com</span><span class="dot"> </span><span class="post-read" style="justify-content: right;"><b>&nbsp;&nbsp;6 chats &nbsp;&nbsp;&nbsp;--- </b></span>
+                      </div><br><div class="meta-footer-thumb">
+            
+                        <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                        </span>
+                        <span class="author-meta">
+                        <span class="post-name"><a href="#">Irvina Louissiana</a></span><br/>
+                        <span class="post-date">irvinalouis1@email.com</span><span class="dot"> </span><span class="post-read" style="justify-content: right;"><b> &nbsp;&nbsp;5 chats &nbsp;&nbsp;&nbsp;--- </b></span>
+                        </div><br><div class="meta-footer-thumb">
+            
+                          <a href="#"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+                          </span>
+                          <span class="author-meta">
+                          <span class="post-name"><a href="#">Jonathan Kepriwe</a></span><br/>
+                          <span class="post-date">octavia@email.com</span><span class="dot"> </span><span class="post-read" style="justify-content: right;"><b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 chats &nbsp;&nbsp;&nbsp;--- </b></span>
+                          </div><br>
+             
+           
+
+            
+          </div>
+        </div>
+          <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Total Messages</p>
+            <div id="bar-chart" style="width: 120%; height: 100%;"></div>
+            
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title" >Message Volume</p>
+            <div id="donutchart" style="width: 400px; height: 300px;"></div>
+            255
+            Message Volume
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Rates</p>
+            <div id="carbon-block"> <img style="width: 300px; height: 300px;" src="/images/Screenshot 2022-10-31 023437.png" alt=""></div>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+
+    <script type="text/javascript" >
+      google.charts.load('current', {'packages':['corechart']}); //bar chart
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'New Ticket', 'Open Ticket', 'Pending', 'Total Resolved', 'Ticket Expired', 'Average'],
+          ['2 May',   5,                7,             2,             8,           2,               4.8] ,
+          ['4 May',   3,                11,            7,             9,           3,               6.6],
+          ['6 May',   11,               9,             6,             7,           1,               6.8],
+          ['8 May',   7,                10,            3,             9,           2,                6.2],
+          ['10 May',  14,               15,            5,             14,          5,               10.6]
+        ]);
+
+        var options = {
+          vAxis: {title: 'Status '},
+          hAxis: {title: 'Date'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+
+
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['chat',     11],
+          ['Broadcast',      2],
+          
+        ]);
+
+        var options = {
+          pieHole: 0.5,
+        };
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="jquery.radialBar.min.js"></script>
+    <script type="text/javascript">
+  
+      var data = [
+        {primaryColor: "#00ffbf", secondaryColor: "#ECEDFF", progress: "70", labelText: "Read"},
+        {primaryColor: "#009973", secondaryColor: "#ECEDFF", progress: "55", labelText: "Delivery"},
+        {primaryColor: "#ffcc00", secondaryColor: "#ECEDFF", progress: "20", labelText: "Failed"},
+      ];
+  
+      $(".radial").radialBar({
+        data: data,
+        width: "400",
+        height: "400",
+        strokeWidth: 12,
+      });
+  
+    </script>
+  <script>
+  try {
+    fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+      return true;
+    }).catch(function(e) {
+      var carbonScript = document.createElement("script");
+      carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+      carbonScript.id = "_carbonads_js";
+      document.getElementById("carbon-block").appendChild(carbonScript);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  </script>
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  
+  </script>
+  
+    </script>
+
+  </body>
+</html>
